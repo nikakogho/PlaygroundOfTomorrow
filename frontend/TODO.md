@@ -11,7 +11,7 @@
 ---
 
 ## Milestone 1 — Routing & Layout
-- [ ] Dynamic route `/courses/[cid]/[mid]` renders slug                     [Codex-OK]
+- [ ] Dynamic route `/courses/[cid]/modules/[mid]` renders slug                     [Codex-OK]
 - [ ] Navbar with SiteTitle + Google-login placeholder                      [Codex-OK]
 - [ ] Course-list page (`/courses`) fed by **mock JSON**                    [Codex-OK]
 
