@@ -12,14 +12,14 @@
 
 ## Milestone 1 — Routing & Layout
 - [x] Dynamic route `/courses/[cid]/modules/[mid]` renders slug             [Codex-OK]
-- [ ] Navbar with SiteTitle + Google-login placeholder                      [Codex-OK]
+- [x] Navbar with SiteTitle + Google-login placeholder                      [Codex-OK]
 - [ ] Course-list page (`/courses`) fed by **mock JSON**                    [Codex-OK]
 
 ---
 
 ## Milestone 2 — MDX Content Loader (local)
 - [ ] `npm i @next/mdx gray-matter`                                         [Codex-OK]
-- [ ] Add `content/neuro101/01-cells-and-membranes.mdx` stub                [Codex-OK]
+- [x] Add `content/neuro101/01-cells-and-membranes.mdx` stub
 - [ ] Module page imports & renders MDX component                           [Codex-OK]
 
 ---
