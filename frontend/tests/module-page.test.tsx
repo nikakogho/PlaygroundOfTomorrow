@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { ModulePagePure } from '../src/components/ModulePage';
 import { getMdxModule } from '../src/mdxModules';
 
@@ -23,6 +24,7 @@ describe('ModulePage', () => {
       />
     );
     expect(screen.getByRole('heading', { name: 'Cells & Membranes' })).toBeInTheDocument();
+    expect(screen.getByText('Next module locked')).toBeInTheDocument();
   });
 
   it('returns undefined for missing module', () => {
@@ -39,5 +41,22 @@ describe('ModulePage', () => {
       />
     );
     expect(screen.getByRole('heading', { name: 'Action Potentials' })).toBeInTheDocument();
+  });
+
+  it('unlocks next module after marking complete', async () => {
+    const mod = getMdxModule('neuro101', 'neuro101-01');
+    render(
+      <ModulePagePure
+        courseId='neuro101'
+        moduleId='neuro101-01'
+        Content={mod!.Component}
+      />
+    );
+    const button = screen.getByRole('button', { name: /mark complete/i });
+    await userEvent.click(button);
+    expect(screen.getByRole('link', { name: /next module/i })).toHaveAttribute(
+      'href',
+      '/courses/neuro101/modules/neuro101-02'
+    );
   });
 });
