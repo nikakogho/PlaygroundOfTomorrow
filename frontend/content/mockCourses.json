@@ -1,1 +1,6 @@
-[{ "id": "neuro101", "title": "Neuro 101", "domain": "neuro" }]
+[{
+  "id": "neuro101",
+  "title": "Neuro 101",
+  "domain": "neuro",
+  "firstModule": "neuro101-01"
+}]
