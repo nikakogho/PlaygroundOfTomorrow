@@ -1,53 +1,26 @@
 # Admin Roadmap (Authoring Interface)
 
-> Goal: CRUD UI for domains → courses → modules, author MDX + metadata,
-> upload starter-code ZIPs, and push to Firestore.
-
----
-
-## Milestone 0 — Scaffold
-- [ ] `npx create-next-app@latest . --typescript --eslint --app` *(inside /admin)*  
-      Choose **src/app/** layout to match frontend.
+> ✅ Scaffolding complete (`create-next-app`), app runs on :3001
 
 ---
 
 ## Milestone 1 — Auth Guard
-- [ ] Reuse Firebase config; restrict access to `admin@example.com` list.  [Codex-OK]
-- [ ] `/dashboard` route redirects unauth users to Google login.
-
----
+- [ ] Add `src/lib/firebase.ts` with SDK init               [Codex-OK]
+- [ ] Google login; restrict to ALLOWED_EMAILS list         [Codex-OK]
+- [ ] `/dashboard` route redirects unauth users             [Codex-OK]
 
 ## Milestone 2 — Course & Module Manager
-- [ ] Firestore collections:  
-    ```
-    domains/{id}
-    courses/{cid}
-    modules/{mid}
-    ```
-- [ ] Dashboard table: list courses with “Add”, “Edit”, “Delete”.  [Codex-OK]
-- [ ] Nested view to list modules; drag-and-drop reorder saves `order` field.
-
----
+- [ ] CRUD table for `courses` and `modules`                [Codex-OK]
+- [ ] Drag-and-drop reorder saves `order`                   [Codex-OK]
 
 ## Milestone 3 — MDX Authoring Form
-- [ ] `react-mde` or simple textarea for MDX body.  
-- [ ] Inputs for front-matter: `title`, `unlockIf`, `recommendedPrereq`.  [Codex-OK]
-- [ ] Preview pane: `next-mdx-remote` renders live preview.
+- [ ] MDX textarea + front-matter inputs                    [Codex-OK]
+- [ ] Live preview with `next-mdx-remote`                   [Codex-OK]
 
----
-
-## Milestone 4 — Asset & ZIP Upload
-- [ ] Firebase Storage bucket `/starterCode/{cid}/{mid}/{filename}.zip`.  [Codex-OK]
-- [ ] File-upload component returns download URL → stored in module doc.
-
----
+## Milestone 4 — Cloudinary Upload
+- [ ] API route `/api/upload` (Cloudinary)                  [Codex-OK]
+- [ ] `AssetUploader.tsx` returns `secure_url`              [Codex-OK]
+- [ ] Save `assetURL` in `modules/{mid}` doc                [Codex-OK]
 
 ## Milestone 5 — Publish Workflow
-- [ ] “Publish” button writes/updates Firestore docs and sets `published: true`.
-- [ ] Frontend course list filters out `published == false`.
-
----
-
-## Icebox
-- [ ] Version history / draft vs live.
-- [ ] Multi-author roles & review queue.
+- [ ] “Publish” toggles `published:true`                    [Codex-OK]
