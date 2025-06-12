@@ -18,7 +18,7 @@
 ---
 
 ## Milestone 2 — MDX Content Loader (local)
-- [ ] `npm i @next/mdx gray-matter`                                         [Codex-OK]
+- [x] `npm i @next/mdx gray-matter`                                         [Codex-OK]
 - [x] Add `content/neuro101/01-cells-and-membranes.mdx` stub
 - [ ] Module page imports & renders MDX component                           [Codex-OK]
 
