@@ -1,15 +1,19 @@
-import type { ComponentType } from "react";
+// src/components/ModulePage.tsx
+
+"use client";
+
+import type { ReactNode } from "react"; // Import ReactNode
 import { getCourseModules, ModuleEntry } from "@/mdxModules";
 import MarkCompleteSection from "./MarkCompleteSection";
 
-export function ModulePagePure({
+export function ModulePageLayout({
   courseId,
   moduleId,
-  Content,
+  children,
 }: {
   courseId: string;
   moduleId: string;
-  Content: ComponentType;
+  children: ReactNode;
 }) {
   const modules = getCourseModules(courseId);
   const idx = modules.findIndex((m) => m.meta.moduleId === moduleId);
@@ -20,7 +24,7 @@ export function ModulePagePure({
       <h1 className="text-2xl font-semibold">Course: {courseId}</h1>
       <p className="text-lg">Module: {moduleId}</p>
       <div className="prose mt-6">
-        <Content />
+        {children}
       </div>
       <MarkCompleteSection courseId={courseId} moduleId={moduleId} next={next} />
     </main>

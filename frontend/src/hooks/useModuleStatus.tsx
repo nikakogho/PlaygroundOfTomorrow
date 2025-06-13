@@ -8,13 +8,15 @@ export interface ModuleStatus {
 
 export function useModuleStatus(courseId: string, moduleId: string): ModuleStatus {
   const key = `progress/${courseId}/${moduleId}`;
-  const [isComplete, setIsComplete] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-    return localStorage.getItem(key) === 'true';
-  });
+  const [isComplete, setIsComplete] = useState<boolean>(false);
 
   const markComplete = () => setIsComplete(true);
   const reset = () => setIsComplete(false);
+
+  useEffect(() => {
+    const savedState = localStorage.getItem(key) === 'true';
+    setIsComplete(savedState);
+  }, [key]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
