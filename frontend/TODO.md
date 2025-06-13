@@ -26,7 +26,7 @@
 
 -## Milestone 3 — Mark-Complete UI
 - [x] `useModuleStatus` hook (localStorage)                                 [Codex-OK]
-- [ ] “✔ Mark complete” button → lock/unlock next module                    [Codex-OK]
+- [x] “✔ Mark complete” button → lock/unlock next module                    [Codex-OK]
 - [ ] **If module doc contains `assetURL`** (Cloudinary) render             [Codex-OK]  
       `Download starter code` link (`<a href … download>`)
 
