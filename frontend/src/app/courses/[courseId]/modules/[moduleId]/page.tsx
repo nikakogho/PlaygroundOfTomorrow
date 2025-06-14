@@ -2,8 +2,8 @@
 import { ModulePageLayout } from "@/components/ModulePage";
 import { getMdxModule } from "@/mdxModules";
 
-export default function ModulePage(props: any) {
-  const { params } = props;
+export default async function ModulePage(props: any) {
+  const params = await props.params;
   const mod = getMdxModule(params.courseId, params.moduleId);
 
   if (!mod) {
