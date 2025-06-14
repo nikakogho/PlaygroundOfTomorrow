@@ -26,7 +26,7 @@ export function ModulePageLayout({
       <div className="prose mt-6">
         {children}
       </div>
-      <MarkCompleteSection courseId={courseId} moduleId={moduleId} next={next} />
+      <MarkCompleteSection courseId={courseId} moduleId={moduleId} next={next} isUnlocked={false} />
     </main>
   );
 }
