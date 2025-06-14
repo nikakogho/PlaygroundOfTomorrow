@@ -11,7 +11,6 @@ type Props = {
 export function MultipleChoice({ children, correctAnswer }: Props) {
   const { onStepComplete, isStepActive } = useStepContext();
   const [selected, setSelected] = useState<number | null>(null);
-  const [attempts, setAttempts] = useState(0);
   const [showHint, setShowHint] = useState(false);
 
   // If the step is not active, immediately show the correct answer.
@@ -32,20 +31,13 @@ export function MultipleChoice({ children, correctAnswer }: Props) {
     return { hint: hintNode, options: optionNodes };
   }, [children]);
 
-  const showSkipButton = attempts >= 3;
-
   const handleSelect = (index: number) => {
     // Only allow interaction if the step is active and not already answered
     if (!isStepActive || selected !== null) return;
 
-    const isCorrect = index === correctAnswer;
     setSelected(index);
 
-    if (isCorrect) {
-      setTimeout(() => onStepComplete(), 300);
-    } else {
-      setAttempts((prev) => prev + 1);
-    }
+    setTimeout(() => onStepComplete(), 300);
   };
 
   const handleSkip = () => {
@@ -83,22 +75,12 @@ export function MultipleChoice({ children, correctAnswer }: Props) {
         })}
       </ul>
       
-      {/* Only show hint/skip controls on the active step */}
       {isStepActive && (
          <div className="mt-4 text-sm">
           {hint && !showHint && (
             <button onClick={() => setShowHint(true)} className="text-blue-600 underline">Show Hint</button>
           )}
           {showHint && <div className="p-3 bg-gray-100 rounded-md">{hint}</div>}
-
-          {showSkipButton && (
-            <div className="mt-4">
-              <p className="text-gray-600 mb-2">Stuck? You can reveal the answer and continue.</p>
-              <button onClick={handleSkip} className="bg-yellow-500 text-white px-3 py-1 rounded-md">
-                Show Answer & Continue
-              </button>
-            </div>
-          )}
         </div>
       )}
     </div>
