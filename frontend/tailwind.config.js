@@ -5,8 +5,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "#2563eb",
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

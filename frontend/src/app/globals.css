@@ -1,26 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%; /* HSL values for white */
+    --foreground: 222.2 84% 4.9%; /* HSL values for a dark gray/black */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* HSL values for dark gray/black */
+    --foreground: 210 40% 98%; /* HSL values for a light gray/white */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
+
+.prose p { @apply my-5 leading-7; }
+.prose h1 { @apply text-3xl font-extrabold tracking-tight sm:text-4xl; }
+.prose h2 { @apply mt-8 mb-4 text-2xl font-bold tracking-tight border-b pb-2; }
+.prose strong { @apply font-semibold; }
+.prose a { @apply text-sky-500 hover:underline; }
