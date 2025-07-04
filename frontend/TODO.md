@@ -27,21 +27,21 @@
 ## Milestone 3 — Mark-Complete UI
 
 Step-based Content Rendering
-- [ ] Create a <Step> wrapper component for chunking content in MDX.
-- [ ] Create useStepProgress hook to manage and persist currentStepIndex in localStorage.
-- [ ] Rework ModulePageLayout to render only unlocked <Step> components based on the hook.
-- [ ] For "passive" steps (no quiz), automatically add a "Continue" button that unlocks the next step.
+- [x] Create a <Step> wrapper component for chunking content in MDX.
+- [x] Create useStepProgress hook to manage and persist currentStepIndex in localStorage.
+- [x] Rework ModulePageLayout to render only unlocked <Step> components based on the hook.
+- [x] For "passive" steps (no quiz), automatically add a "Continue" button that unlocks the next step.
 
 Enhanced Interactive Components
-- [ ] Update ExerciseContext to provide an onComplete() callback that advances the current step.
-- [ ] Add attempt-tracking state to <MultipleChoice> and <FillInTheBlank>.
-- [ ] Implement a <Hint> component that can be nested within an exercise.
-- [ ] Add logic to show a "Show Answer & Continue" button after 3 failed attempts.
+- [x] Update ExerciseContext to provide an onComplete() callback that advances the current step.
+- [x] Add attempt-tracking state to <MultipleChoice> and <FillInTheBlank>.
+- [x] Implement a <Hint> component that can be nested within an exercise.
+- [x] Add logic to show a "Show Answer & Continue" button after 3 failed attempts.
 
 ---
 
 ## Milestone 4 — Mark-Complete & Assets
-- [ ] The "✔ Mark complete" button for the entire module becomes enabled only after the final step is completed.
+- [x] The "✔ Mark complete" button for the entire module becomes enabled only after the final step is completed.
 - [ ] If a module doc contains assetURL in its frontmatter, render a Download starter code link.
 
 ---
