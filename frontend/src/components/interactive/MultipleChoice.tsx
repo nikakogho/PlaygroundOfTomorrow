@@ -16,6 +16,7 @@ export function MultipleChoice({ children, correctAnswer }: Props) {
   // If the step is not active, immediately show the correct answer.
   useEffect(() => {
     if (!isStepActive) {
+      console.log("Step is not active, showing correct answer immediately.");
       setSelected(correctAnswer);
     }
   }, [isStepActive, correctAnswer]);
@@ -33,16 +34,14 @@ export function MultipleChoice({ children, correctAnswer }: Props) {
 
   const handleSelect = (index: number) => {
     // Only allow interaction if the step is active and not already answered
-    if (!isStepActive || selected !== null) return;
+    if (!isStepActive) return;
 
     setSelected(index);
 
-    setTimeout(() => onStepComplete(), 300);
-  };
-
-  const handleSkip = () => {
-    setSelected(correctAnswer);
-    setTimeout(() => onStepComplete(), 1000);
+    if (index === correctAnswer) {
+      console.log("Correct answer selected:", index);
+      setTimeout(() => onStepComplete(), 300);
+    }
   };
 
   return (
@@ -51,13 +50,11 @@ export function MultipleChoice({ children, correctAnswer }: Props) {
         {options.map((option, index) => {
           const itemIndex = index + 1;
           const isSelected = selected === itemIndex;
-          const isCorrectAnswer = correctAnswer === itemIndex;
+          const selectedIsCorrectAnswer = correctAnswer === selected;
 
           let stateClass = "border-gray-300";
           if (isSelected) {
-            stateClass = isCorrectAnswer ? "bg-green-100 border-green-500" : "bg-red-100 border-red-500";
-          } else if (selected !== null && isCorrectAnswer) {
-            stateClass = "bg-green-100 border-green-500";
+            stateClass = selectedIsCorrectAnswer ? "bg-green-100 border-green-500" : "bg-red-100 border-red-500";
           }
 
           // Disable clicks if the step is not active
