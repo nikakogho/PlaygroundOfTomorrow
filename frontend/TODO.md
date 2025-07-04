@@ -60,7 +60,7 @@ Enhanced Interactive Components
 ---
 
 ## Milestone 6 — Styling Pass
-- [ ] *(Optional)* Tailwind install; responsive nav / buttons               [Codex-OK]
+- [x] *(Optional)* Tailwind install; responsive nav / buttons               [Codex-OK]
 
 ---
 
