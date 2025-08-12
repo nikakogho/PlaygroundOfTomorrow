@@ -16,7 +16,7 @@ Companies like Organogenesis developed products like Apligraf. It's a bilayered 
     type: 'content'
   },
   {
-    content: `<ImageEmbed src="A photo showing a sheet of engineered skin, perhaps being held with forceps." alt="A sheet of engineered skin." caption="Engineered skin is one of the first major clinical successes."/>`,
+    content: `<ImageEmbed src="https://pub.mdpi-res.com/cells/cells-09-01622/article_deploy/html/images/cells-09-01622-ag-550.jpg?1596114822" alt="A sheet of engineered skin." caption="Engineered skin is one of the first major clinical successes."/>`,
     type: 'content'
   },
   {

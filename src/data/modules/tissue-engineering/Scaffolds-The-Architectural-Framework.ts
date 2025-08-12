@@ -18,7 +18,7 @@ A good scaffold isn't just a passive sponge. It must be carefully designed with 
     type: 'content'
   },
   {
-    content: `<ImageEmbed src="A close-up electron microscope image of a highly porous, interconnected scaffold material, looking like a complex white sponge." alt="Porous tissue engineering scaffold" caption="A scaffold's pores allow cells to inhabit the structure."/>`,
+    content: `<ImageEmbed src="https://static.vecteezy.com/system/resources/thumbnails/046/088/681/small/a-detailed-look-at-a-nanocrystalline-coating-made-up-of-tiny-particles-arranged-in-a-highly-organized-pattern-this-innovative-material-could-be-used-to-make-medical-device-photo.jpg" alt="Porous tissue engineering scaffold" caption="A scaffold's pores allow cells to inhabit the structure."/>`,
     type: 'content'
   },
   {

@@ -18,7 +18,7 @@ At its core, it's about combining three key ingredients. This is known as the **
   {
     content: `## The Tissue Engineering Triad
 
-<ImageEmbed src="A diagram showing a triangle with 'Cells', 'Scaffold', and 'Signals' at the vertices. Arrows connect them, showing their interplay to create new tissue." alt="The Tissue Engineering Triad" caption="The three pillars of tissue engineering."/>`,
+<ImageEmbed src="https://www.researchgate.net/publication/256838030/figure/fig1/AS:297833648410624@1448020483277/The-three-essential-components-that-make-up-the-tissue-engineering-triad.png" alt="The Tissue Engineering Triad" caption="The three pillars of tissue engineering."/>`,
     type: 'content'
   },
   {

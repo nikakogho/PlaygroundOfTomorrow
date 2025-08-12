@@ -20,7 +20,7 @@ Think of it as an artificial body. Its job is to:
     type: 'content'
   },
   {
-    content: `<ImageEmbed src="A photo of a complex lab bioreactor with a glass chamber, tubes, and a control panel." alt="A laboratory tissue engineering bioreactor." caption="Bioreactors provide a controlled environment for tissue growth."/>`,
+    content: `<ImageEmbed src="https://bioreactors.net/wp-content/uploads/2024/06/Bioleaching-main.jpg" alt="A laboratory tissue engineering bioreactor." caption="Bioreactors provide a controlled environment for tissue growth."/>`,
     type: 'content'
   },
   {

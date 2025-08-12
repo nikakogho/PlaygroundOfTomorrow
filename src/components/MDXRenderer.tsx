@@ -104,6 +104,8 @@ export function MDXRenderer({ content, isComplete, onComplete }: MDXRendererProp
       const alt = match[3] || match[4];
       const caption = match[5] || match[6];
       
+      console.log('Image embed found:', { src, alt, caption });
+
       parts.push({
         type: 'imageEmbed',
         src,

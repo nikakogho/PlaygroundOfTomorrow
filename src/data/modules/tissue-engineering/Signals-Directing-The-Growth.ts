@@ -21,7 +21,7 @@ These can be loaded into the scaffold or supplied in the nutrient medium.`,
     type: 'content'
   },
   {
-    content: `<YouTubeEmbed videoId="2_p9--Y_KxQ" title="Animation of Growth Factor Signaling Pathway" />`,
+    content: `<YouTubeEmbed videoId="7g2f0dhp2w8" title="Animation of Growth Factor" />`,
     type: 'content'
   },
   {

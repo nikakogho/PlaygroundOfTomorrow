@@ -33,7 +33,7 @@ Often, we don't want just any cell. We want **stem cells**. These are special, u
     type: 'content'
   },
   {
-    content: `<ImageEmbed src="A diagram showing a stem cell at the top, with arrows pointing down to various specialized cells like a neuron, a muscle cell, and a blood cell." alt="Stem cell differentiation" caption="Stem cells can differentiate into many cell types."/>`,
+    content: `<ImageEmbed src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Stem_cell_differentiation.svg/768px-Stem_cell_differentiation.svg.png" alt="Stem cells can differentiate into many cell types." caption="Stem cells can differentiate into many cell types."/>`,
     type: 'content'
   },
   {
