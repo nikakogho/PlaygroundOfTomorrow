@@ -80,7 +80,7 @@ export default function ProfilePage() {
         if (courseProgress) {
           coursesStarted++;
           
-          if (courseProgress.completedModules.length === course.moduleIds.length) {
+          if (courseProgress.completedModules && courseProgress.completedModules.length === course.moduleIds.length) {
             coursesCompleted++;
           }
 
@@ -169,7 +169,7 @@ export default function ProfilePage() {
                 <CourseProgressCard
                   key={course.id}
                   course={course}
-                  completedModules={courseProgress ? courseProgress.completedModules.length : 0}
+                  completedModules={courseProgress?.completedModules?.length ?? 0}
                   completedSections={completedSections}
                 />
               );
