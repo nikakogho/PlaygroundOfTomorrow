@@ -3,7 +3,10 @@
     "id": "neuroscience-101",
     "title": "Neuroscience Fundamentals",
     "summary": "Explore the fascinating world of the human brain, from individual neurons to complex neural networks that enable thought and behavior.",
-    "moduleIds": ["Intro-To-Neuroscience", "Neuron", "Spikes-Synapses-Neurotransmitters", "Neuroplasticity-And-Brain-Disorders", "Senses-And-Movement", "Reading-And-Writing-To-Brain"],
+    "moduleIds": ["Intro-To-Neuroscience", "The-Neuron-Anatomy", "The-Glia-Unsung-Heroes", "Neural-Signaling-The-Action-Potential", "The-Synapse-Chemical-Communication", "Neurotransmitters-The-Molecules-Of-Mind",
+  "Nervous-System-Overview-CNS-PNS", "The-Spinal-Cord-And-Brainstem", "The-Cerebellum-And-Movement", "Thalamus-Hypothalamus-And-Limbic-System", "The-Cerebral-Cortex-And-Its-Lobes",
+  "Vision-From-Light-To-Sight", "Hearing-And-Balance", "Chemical-Senses-Taste-And-Smell", "The-Bodily-Senses-Touch-And-Proprioception",
+  "Learning-And-Memory", "Emotion-And-Motivation", "Attention-And-Consciousness", "The-Neuroscience-Of-Sleep", "Thinking-Planning-And-Problem-Solving", "The-Future-Plasticity-Disorders-And-Tools"],
     "gradient": "gradient-neural",
     "category": "neuro"
   },

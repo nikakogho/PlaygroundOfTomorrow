@@ -2,112 +2,60 @@ export const sections = [
   {
     content: `## A Universe Inside Your Head
 
-Every memory you cherish, every idea you have, every person you love—it all exists as a complex pattern of electricity and chemistry inside the 3-pound organ between your ears.
-
-The human brain is the most sophisticated machine on Earth. Neuroscience is the bold attempt to understand how it works. Ready to take the first step?`,
+Every memory you cherish, every idea you have, every person you love—it all exists as a complex pattern of electricity and chemistry inside the 3-pound organ between your ears. The human brain is the most sophisticated machine on Earth. Neuroscience is the bold attempt to understand how it works. Ready to take the first step?`,
     type: 'content'
   },
   {
     content: `## What *is* Neuroscience?
 
 Neuroscience isn't just one field; it's a team sport.
-- **Biologists** study the cells and molecules.
-- **Psychologists** connect brain activity to behavior and thought.
-- **Computer Scientists** model brain networks and build AI inspired by them.
-- **Physicians** diagnose and treat brain disorders.
-
-Together, they tackle the biggest questions: What is consciousness? How do we learn? What goes wrong in disease?`,
+- **Molecular & Cellular Neuroscience:** Studies the genes, proteins, and molecules that make brain cells work.
+- **Cognitive Neuroscience:** Connects brain activity to mental processes like thought, memory, and attention.
+- **Computational Neuroscience:** Uses math and computer models to simulate and understand brain networks.
+- **Clinical Neuroscience:** Physicians like neurologists and psychiatrists diagnose and treat disorders of the nervous system.`,
     type: 'content'
   },
   {
-    content: `A scientist using computer models to simulate how neurons connect is approaching neuroscience from which discipline?
+    content: `A scientist studying how different gene mutations affect the function of a single neuron is working in which subfield?
 
-<MultipleChoice correctAnswer={2}>
-  <p>Biology</p>
-  <p>Psychology</p>
-  <p>Computer Science</p>
-  <p>Medicine</p>
+<MultipleChoice correctAnswer={0}>
+  <p>Molecular & Cellular Neuroscience</p>
+  <p>Cognitive Neuroscience</p>
+  <p>Computational Neuroscience</p>
+  <p>Clinical Neuroscience</p>
 </MultipleChoice>`,
     type: 'interactive'
   },
   {
     content: `## A High-Level Map
 
-Let's start with a bird's-eye view. The brain isn't a single, uniform blob. It has distinct regions, each specialized for different tasks. Think of it as a bustling city with different districts.
-
-We'll focus on the three largest "districts":
-1. The Cerebrum (The Thinking Cap)
-2. The Cerebellum (The Movement Coordinator)
-3. The Brainstem (The Life Support System)`,
+To begin our journey, let's establish some basic orientation. The entire network of nerve cells in your body is the **Nervous System**. It's divided into two main parts:
+1.  The **Central Nervous System (CNS):** The command center, consisting of the brain and the spinal cord.
+2.  The **Peripheral Nervous System (PNS):** All the nerves that branch out from the CNS to the rest of the body, connecting it to the limbs and organs.`,
     type: 'content'
   },
   {
-    content: `## The Cerebrum: Your Inner CEO
+    content: `## The Central Dogma of Neuroscience
 
-The **Cerebrum** is the large, wrinkled outer part that you typically picture when you think of a brain. It's the home of your conscious thought, personality, memory, and language.
+Before we dive deep, let's introduce the two main types of cells that make up the nervous system.
+- **Neurons:** The stars of the show. These are the cells that are specialized for communication, sending and receiving signals with incredible speed and precision.
+- **Glia:** The essential supporting cast. Glial cells provide structural support, nutrients, and insulation for the neurons. They are far more than just "glue."
 
-It's divided into two halves, the left and right hemispheres, which are connected by a thick bundle of nerves called the **corpus callosum**.
-
-<ImageEmbed src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/902/2015/02/23224600/CNX_Psych_03_04_Lobes.jpg" alt="Diagram showing the Cerebrum and its four lobes: Frontal, Parietal, Temporal, and Occipital." caption="The Cerebrum is divided into four main lobes."/>`,
+The intricate dance between these two cell types makes everything in your brain possible.`,
     type: 'content'
   },
-  {
-    content: `## The Four Lobes of the Cerebrum
+    {
+    content: `The part of the nervous system that includes the brain and spinal cord is known as the ________ Nervous System.
 
-Each hemisphere is further divided into four **lobes**:
-- **Frontal Lobe:** Your command center. It handles planning, decision-making, problem-solving, and personality.
-- **Parietal Lobe:** Processes sensory information like touch, temperature, and pain. It helps you navigate the space around you.
-- **Temporal Lobe:** Manages memory, understanding language, and processing sounds.
-- **Occipital Lobe:** This lobe is almost exclusively dedicated to one thing: **vision**.`,
-    type: 'content'
-  },
-  {
-    content: `An injury to which lobe would most likely cause problems with vision?
-
-<FillInTheBlank correctAnswer={["occipital lobe", "occipital"]} placeholder="Enter lobe name..." />`,
+<FillInTheBlank correctAnswer="central" placeholder="Enter the term..." />`,
     type: 'interactive'
   },
   {
-    content: `## The Cerebellum: Master of Motion
+    content: `## Up Next: The Brain's Messengers
 
-Tucked underneath the cerebrum is the **Cerebellum**, which means "little brain" in Latin. While it's smaller, it's incredibly dense with brain cells.
+You have the grand overview. You know the major divisions of the nervous system and the two main cell types. Now, it's time to zoom in. Way in.
 
-Its main job is to coordinate voluntary movements, posture, balance, and speech, resulting in smooth and balanced muscular activity. It's the difference between a clumsy stumble and a graceful dance.`,
-    type: 'content'
-  },
-  {
-    content: `A professional athlete, like a gymnast or a figure skater, relies heavily on their ________ for precise, coordinated movements.
-
-<MultipleChoice correctAnswer={1}>
-  <p>Frontal Lobe</p>
-  <p>Cerebellum</p>
-  <p>Brainstem</p>
-  <p>Temporal Lobe</p>
-</MultipleChoice>`,
-    type: 'interactive'
-  },
-  {
-    content: `## The Brainstem: The Unsung Hero
-
-Connecting the cerebrum and cerebellum to the spinal cord is the **Brainstem**. This is the most ancient and basic part of the brain.
-
-It's in charge of all the functions your body needs to stay alive, things you never have to think about: breathing, heart rate, blood pressure, and sleep. It's the automatic pilot that keeps your body running 24/7.`,
-    type: 'content'
-  },
-  {
-    content: `## A Famous Case: Phineas Gage
-
-In 1848, a railroad worker named Phineas Gage had a terrible accident where a large iron rod was driven completely through his head, destroying much of his **frontal lobe**.
-
-Miraculously, he survived. But his friends said he was "no longer Gage." His personality had completely changed. This was one of the first cases to show that specific parts of the brain, like the frontal lobe, are tied to specific functions, like personality.`,
-    type: 'content'
-  },
-  {
-    content: `## Time to Zoom In
-
-You've completed the grand tour! You now have a basic map of the brain and its major districts.
-
-But how do these districts actually *do* anything? How do they communicate? To find out, we need to zoom in. Way, way in. In the next module, we'll leave the districts behind and meet the individual citizens of the brain: the neurons.`,
+In the next module, we'll meet the fundamental building block of the brain's communication network: the neuron.`,
     type: 'content'
   }
 ] as const;

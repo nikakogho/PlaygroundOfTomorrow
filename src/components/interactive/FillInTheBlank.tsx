@@ -56,8 +56,7 @@ export default function FillInTheBlank({
       // Reset after showing error briefly
       setTimeout(() => {
         setIsSubmitted(false);
-        setValue('');
-      }, 2000);
+      }, 1000);
     }
   };
 

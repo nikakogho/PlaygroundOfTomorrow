@@ -71,7 +71,7 @@ export default function ModulePage() {
       setShowCelebration(true);
       setTimeout(() => {
         navigate(`/courses/${courseId}`);
-      }, 3000);
+      }, 1500);
     }
   };
 

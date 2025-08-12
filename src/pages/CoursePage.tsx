@@ -51,15 +51,9 @@ function ModuleCard({
             <h3 className={`text-lg font-semibold ${
               isUnlocked ? 'text-text-primary' : 'text-text-muted'
             }`}>
-              Module {moduleIndex + 1}
+              {moduleId.replace(/-/g, ' ')}
             </h3>
           </div>
-          
-          <p className={`text-sm mb-4 capitalize ${
-            isUnlocked ? 'text-text-secondary' : 'text-text-muted'
-          }`}>
-            {moduleId.replace(/-/g, ' ')}
-          </p>
           
           {isUnlocked && totalSections > 0 && (
             <div className="space-y-2">
