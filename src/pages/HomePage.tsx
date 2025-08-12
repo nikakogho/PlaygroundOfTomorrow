@@ -116,7 +116,7 @@ export default function HomePage() {
     <div className="space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold text-text-primary">
-          Master Mind And Machine
+          Master The Universe, Body, Mind, Machine
         </h1>
         <p className="text-xl text-text-secondary max-w-2xl mx-auto">
           Interactive courses designed to build deep understanding through hands-on learning and problem solving.

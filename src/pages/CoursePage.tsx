@@ -130,7 +130,7 @@ export default function CoursePage() {
           // Load module details
           const details: { [key: string]: number } = {};
           for (const moduleId of courseData.moduleIds) {
-            const sections = await loadModuleSections(moduleId);
+            const sections = await loadModuleSections(courseId, moduleId);
             details[moduleId] = sections.length;
           }
           setModuleDetails(details);

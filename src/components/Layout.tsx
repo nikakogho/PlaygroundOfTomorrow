@@ -25,7 +25,7 @@ export function Layout({ children }: LayoutProps) {
               <div className="p-2 bg-gradient-brand rounded-lg">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              LearnMind
+              Playground Of Tomorrow
             </Link>
             
             <nav className="flex items-center gap-6">

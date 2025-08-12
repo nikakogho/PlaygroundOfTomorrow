@@ -10,9 +10,9 @@ export async function getCourse(courseId: string): Promise<CourseMetadata | unde
   return courses.find(c => c.id === courseId);
 }
 
-export async function loadModuleSections(moduleId: string) {
+export async function loadModuleSections(courseId: string, moduleId: string) {
   try {
-    const module = await import(`../data/modules/${moduleId}.ts`);
+    const module = await import(`../data/modules/${courseId}/${moduleId}.ts`);
     return module.sections || [];
   } catch (error) {
     console.error(`Error loading module ${moduleId}:`, error);

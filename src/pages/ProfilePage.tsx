@@ -6,12 +6,14 @@ import { CourseMetadata } from '@/lib/types';
 
 interface CourseProgressProps {
   course: CourseMetadata;
-  completed: number;
-  total: number;
+  completedModules: number;
+  completedSections: number;
 }
 
-function CourseProgressCard({ course, completed, total }: CourseProgressProps) {
-  const progressPercentage = total > 0 ? (completed / total) * 100 : 0;
+function CourseProgressCard({ course, completedModules, completedSections }: CourseProgressProps) {
+  const totalModules = course.moduleIds.length;
+  
+  const progressPercentage = totalModules > 0 ? (completedModules / totalModules) * 100 : 0;
   
   return (
     <div className="bg-surface border border-border rounded-xl p-6">
@@ -41,7 +43,7 @@ function CourseProgressCard({ course, completed, total }: CourseProgressProps) {
         </div>
         
         <div className="flex items-center justify-between text-xs text-text-muted">
-          <span>{completed} sections completed</span>
+          <span>{completedSections} sections completed</span>
           {progressPercentage === 100 && (
             <span className="flex items-center gap-1 text-accent-green">
               <CheckCircle className="w-3 h-3" />
@@ -58,7 +60,6 @@ export default function ProfilePage() {
   const { progress, isLoaded, resetAllProgress } = useProgress();
   const [courses, setCourses] = useState<CourseMetadata[]>([]);
   const [stats, setStats] = useState({
-    totalSections: 0,
     completedSections: 0,
     coursesStarted: 0,
     coursesCompleted: 0
@@ -70,7 +71,6 @@ export default function ProfilePage() {
       setCourses(coursesData);
       
       // Calculate stats
-      let totalSections = 0;
       let completedSections = 0;
       let coursesStarted = 0;
       let coursesCompleted = 0;
@@ -79,22 +79,16 @@ export default function ProfilePage() {
         const courseProgress = progress[course.id];
         if (courseProgress) {
           coursesStarted++;
-          const courseCompletedSections = Object.values(courseProgress.completedSections)
-            .reduce((sum, sections) => sum + sections.length, 0);
-          completedSections += courseCompletedSections;
           
-          // Estimate if course is completed (this is simplified)
-          if (courseCompletedSections >= course.moduleIds.length * 2) {
+          if (courseProgress.completedModules.length === course.moduleIds.length) {
             coursesCompleted++;
           }
+
+          completedSections += course.moduleIds.reduce((sum, moduleId) => sum + (courseProgress.completedSections[moduleId]?.length ?? 0), 0);
         }
-        
-        // Estimate total sections (simplified)
-        totalSections += course.moduleIds.length * 3;
       });
       
       setStats({
-        totalSections,
         completedSections,
         coursesStarted,
         coursesCompleted
@@ -166,18 +160,17 @@ export default function ProfilePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {courses.map(course => {
               const courseProgress = progress[course.id];
-              const completed = courseProgress 
+              const completedSections = courseProgress 
                 ? Object.values(courseProgress.completedSections)
                     .reduce((sum, sections) => sum + sections.length, 0)
                 : 0;
-              const total = course.moduleIds.length * 3; // Estimated
               
               return (
                 <CourseProgressCard
                   key={course.id}
                   course={course}
-                  completed={completed}
-                  total={total}
+                  completedModules={courseProgress ? courseProgress.completedModules.length : 0}
+                  completedSections={completedSections}
                 />
               );
             })}

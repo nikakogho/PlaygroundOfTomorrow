@@ -25,7 +25,7 @@ export default function ModulePage() {
       if (!moduleId) return;
       
       try {
-        const sectionsData = await loadModuleSections(moduleId);
+        const sectionsData = await loadModuleSections(courseId, moduleId);
         setSections(sectionsData);
         
         if (isLoaded && courseId) {
