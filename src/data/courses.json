@@ -17,5 +17,16 @@
     "moduleIds": ["Intro-To-Tissue-Engineering", "Cells-The-Living-Bricks", "Scaffolds-The-Architectural-Framework", "Signals-Directing-The-Growth", "Bioreactors-The-Tissue-Nursery", "Applications-And-The-Future"],
     "gradient": "gradient-code",
     "category": "biotech"
+  },
+  {
+    "id": "rocket-science-101",
+    "title": "Rocket Science 101: From Launchpad to Lagrange Point",
+    "summary": "Master the fundamental principles of rocketry, from the chemistry of propulsion and the physics of orbital mechanics to the engineering marvels of reusable rockets and the future of humanity in space.",
+    "moduleIds": [
+      "The-Tyranny-Of-The-Rocket-Equation", "Controlled-Explosions-Combustion-And-Propellants", "Anatomy-Of-A-Rocket-Engine", "Performance-Metrics-Thrust-And-Specific-Impulse", "Beyond-Chemical-Rockets-The-Electric-Future",
+      "Achieving-Orbit-Falling-And-Missing", "Keplers-Laws-The-Rules-Of-The-Road", "Changing-Lanes-Orbital-Maneuvers", "Where-Are-We-Anatomy-Of-An-Orbit", "The-Interplanetary-Highway-Gravity-Assists",
+      "The-Reusable-Revolution", "Gateway-To-The-Galaxy-Modern-Space-Stations", "Return-To-The-Moon-The-Artemis-Program", "The-Red-Frontier-Getting-To-Mars", "Cosmic-Prospecting-The-Future-Of-Space-Mining"],
+    "gradient": "gradient-code",
+    "category": "space"
   }
 ]

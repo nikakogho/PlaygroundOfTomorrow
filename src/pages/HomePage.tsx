@@ -15,10 +15,13 @@ function CourseCard({ course, progress }: CourseCardProps) {
   
   let logo = <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>;
   if (course.category === 'neuro') {
-    logo = <img src="brain.png" alt="Science Icon" className="w-14 h-14" />;
+    logo = <img src="brain.png" alt="Brain Icon" className="w-14 h-14" />;
   }
   else if (course.category === 'biotech') {
-    logo = <img src="biotech.png" alt="Science Icon" className="w-14 h-14" />;
+    logo = <img src="biotech.png" alt="Biotech Icon" className="w-14 h-14" />;
+  }
+  else if (course.category === 'space') {
+    logo = <img src="rocket.png" alt="Space Icon" className="w-14 h-14" />;
   }
 
   return (
