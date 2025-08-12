@@ -1,0 +1,18 @@
+[
+  {
+    "id": "neuroscience-101",
+    "title": "Neuroscience Fundamentals",
+    "summary": "Explore the fascinating world of the human brain, from individual neurons to complex neural networks that enable thought and behavior.",
+    "moduleIds": ["Intro-To-Neuroscience", "Neuron", "Spikes-Synapses-Neurotransmitters", "Neuroplasticity-And-Brain-Disorders", "Senses-And-Movement", "Reading-And-Writing-To-Brain"],
+    "gradient": "gradient-neural",
+    "category": "neuro"
+  },
+  {
+    "id": "tissue-engineering",
+    "title": "Tissue Engineering",
+    "summary": "Dive into the revolutionary field of tissue engineering. This course explores how scientists combine living cells, advanced materials (scaffolds), and biochemical signals to repair, replace, or regenerate human tissues and organs, moving from fundamental principles to cutting-edge applications.",
+    "moduleIds": ["Intro-To-Tissue-Engineering", "Cells-The-Living-Bricks", "Scaffolds-The-Architectural-Framework", "Signals-Directing-The-Growth", "Bioreactors-The-Tissue-Nursery", "Applications-And-The-Future"],
+    "gradient": "gradient-code",
+    "category": "biotech"
+  }
+]

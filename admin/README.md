@@ -1,1 +1,0 @@
-Next.js admin app will live here
