@@ -3,11 +3,11 @@
 Phenomena-first, story-driven learning with Socratic prompts, interactive sims, and auto-feedback—built on a truth layer of vetted facts and equations.
 
 ## What can I do here?
-- Learn fundamentals (Scale, Energy, Info, Control…) through short quests.
+- Learn fundamentals (Scale, Energy, Information, Systems & Control...) through short quests.
 - Play with **interactive sims** (e.g., Δv sliders, log-scale drag).
 - Answer **open**, **numeric (with units)**, **multiple-choice** (single/multi), or **fill-in-the-blank** questions.
 - Get **instant feedback** and export a **portfolio** of your work.
-- Switch **skins** (Starship/Medieval) without changing the underlying truth.
+- Switch **skins** (Starship/Medieval/etc) without changing the underlying truth.
 
 ## Status (MVP)
 - Quests: EP01 (Scale Atlas), EP08 (Rockets Δv)
