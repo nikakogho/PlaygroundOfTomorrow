@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Playground of Tomorrow
 
-## Project info
+Phenomena-first, story-driven learning with Socratic prompts, interactive sims, and auto-feedback—built on a truth layer of vetted facts and equations.
 
-**URL**: https://lovable.dev/projects/bf5e14ef-3243-4e2f-98ad-c742dca1e6cd
+## What can I do here?
+- Learn fundamentals (Scale, Energy, Info, Control…) through short quests.
+- Play with **interactive sims** (e.g., Δv sliders, log-scale drag).
+- Answer **open**, **numeric (with units)**, **multiple-choice** (single/multi), or **fill-in-the-blank** questions.
+- Get **instant feedback** and export a **portfolio** of your work.
+- Switch **skins** (Starship/Medieval) without changing the underlying truth.
 
-## How can I edit this code?
+## Status (MVP)
+- Quests: EP01 (Scale Atlas), EP08 (Rockets Δv)
+- Sims: SizeAtlas, DeltaV
+- Persistence: localStorage (via StorageAdapter)
+- Content is JSON under `/content/**` and validated at runtime.
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/bf5e14ef-3243-4e2f-98ad-c742dca1e6cd) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Run locally
+```bash
+pnpm install
+pnpm dev
 ```
 
-**Edit a file directly in GitHub**
+## Repo structure
+```
+/content
+  /cards/*.json         # UniverseCards (facts)
+/equations/*.json       # EquationSpec (units, tolerances)
+/schemas/*.json         # AnswerSchemas for open answers
+/lore/*.json            # LoreTemplates by skin
+/quests/*.json          # Quest specs
+/src
+  /components           # UI (LoreBlock, QuestionItem, SimHost, etc.)
+  /sims                 # SizeAtlasSim, DeltaVSim
+  /lib                  # storage, grader, units, planner, narrative
+  /pages                # /, /quest/[slug], /portfolio, /settings, /content
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Authoring new content
 
-**Use GitHub Codespaces**
+1. Add Cards/Equations/Schemas JSON.
+2. Create a Quest that references them.
+3. (Optional) Add a LoreTemplate with placeholders for each skin.
+4. Reload — your quest appears. JSON is validated; errors show on /content.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Accessibility
 
-## What technologies are used for this project?
+- Keyboard navigable, ARIA-labeled controls, high-contrast friendly.
 
-This project is built with:
+## Roadmap
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Energy Bookkeeping quest and sim
+- Lane toggle (Intuition/Math)
+- Planner v1 (unlock flow)
+- Optional: LLM open-answer grading
+- Optional: Firebase adapter
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/bf5e14ef-3243-4e2f-98ad-c742dca1e6cd) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### License: MIT (TBD)

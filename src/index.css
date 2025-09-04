@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Learning Platform Design System - Brilliant.org inspired */
-
 @layer base {
   :root {
     /* Core Brand Colors */
