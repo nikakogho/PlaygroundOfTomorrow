@@ -2,7 +2,7 @@
 
 ## Milestone 1 — Kernel MVP
 - [X] Next.js + TS + Tailwind scaffolding
-- [ ] StorageAdapter + LocalStorage implementation
+- [X] StorageAdapter + LocalStorage implementation
 - [ ] Zod schemas + content loader with error UI
 - [ ] Pages: /, /quest/[slug], /portfolio, /settings, /content (dev)
 - [ ] Question Engine components
